@@ -119,20 +119,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="hqq-6u-CId">
-                                        <rect key="frame" x="0.0" y="28.333333333333318" width="275" height="34.333333333333343"/>
+                                        <rect key="frame" x="0.0" y="28.333333333333318" width="256.33333333333331" height="34.333333333333343"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krY-v8-u6K">
-                                                <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="34.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="49.666666666666664" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="보라색"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system" imagePadding="0.0">
+                                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsH-Ec-Mzt">
-                                                <rect key="frame" x="103.33333333333334" y="0.0" width="68.333333333333343" height="34.333333333333336"/>
+                                                <rect key="frame" x="84.666666666666686" y="0.0" width="68.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="초록색"/>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qhu-bf-FaN">
-                                                <rect key="frame" x="206.66666666666666" y="0.0" width="68.333333333333343" height="34.333333333333336"/>
+                                                <rect key="frame" x="188" y="0.0" width="68.333333333333314" height="34.333333333333336"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="노란색"/>
                                             </button>
@@ -193,6 +195,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
