@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LEDBoardSettingDelegate : AnyObject {
+    func changedSetting(text : String?, textColor: UIColor, backgroundColor: UIColor)
+}
+
 class SettingViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
@@ -17,31 +21,47 @@ class SettingViewController: UIViewController {
     @IBOutlet weak var yellowButton: UIButton!
     @IBOutlet weak var greenButton: UIButton!
     
+    weak var delegate: LEDBoardSettingDelegate?
+    
+    var textColor: UIColor = .blue
+    var backgroundColor : UIColor = .brown
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     @IBAction func tapTextColorButton(_ sender: UIButton) {
         if sender == self.blueButton{
             self.changeTextColor(color: .blue)
+            self.textColor = .blue
           } else if sender == self.redButton{
             self.changeTextColor(color: .red)
+              self.textColor = .red
           } else {
             self.changeTextColor(color: .purple)
+              self.textColor = .purple
           }
     }
     
     @IBAction func tapBackgroundColorButton(_ sender: UIButton) {
         if sender == self.brownButton{
             self.changeBackgroundColor(color: .brown)
+            self.backgroundColor = .brown
           } else if sender == self.yellowButton{
             self.changeBackgroundColor(color: .yellow)
+            self.backgroundColor = .yellow
           } else {
             self.changeBackgroundColor(color: .green)
+            self.backgroundColor = .green
           }
         
     }
     
     @IBAction func tapSaveButton(_ sender: UIButton) {
+        self.delegate?.changedSetting(text: self.textField.text,
+                                      textColor: textColor,
+                                      backgroundColor: backgroundColor)
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func changeTextColor(color: UIColor) {
